@@ -1,20 +1,33 @@
-int ledPin = 13; // Built-in LED or external LED on pin 13
+#define LIGHT 13
+#define FAN 12
 
 void setup() {
+  pinMode(LIGHT, OUTPUT);
+  pinMode(FAN, OUTPUT);
   Serial.begin(9600);
-  pinMode(ledPin, OUTPUT);
-  Serial.println("Type 1 to ON, 0 to OFF");
+  Serial.println("Send 'A' for Light ON, 'a' for Light OFF");
+  Serial.println("Send 'B' for Fan ON, 'b' for Fan OFF");
 }
 
 void loop() {
-  if (Serial.available() > 0) {
-    char input = Serial.read();
-    if (input == '1') {
-      digitalWrite(ledPin, HIGH);
-      Serial.println("LED ON");
-    } else if (input == '0') {
-      digitalWrite(ledPin, LOW);
-      Serial.println("LED OFF");
+  if (Serial.available()) {
+    char cmd = Serial.read();
+    
+    if (cmd == 'A') {
+      digitalWrite(LIGHT, HIGH);
+      Serial.println("Light ON");
+    }
+    else if (cmd == 'a') {
+      digitalWrite(LIGHT, LOW);
+      Serial.println("Light OFF");
+    }
+    else if (cmd == 'B') {
+      digitalWrite(FAN, HIGH);
+      Serial.println("Fan ON");
+    }
+    else if (cmd == 'b') {
+      digitalWrite(FAN, LOW);
+      Serial.println("Fan OFF");
     }
   }
 }
