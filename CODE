@@ -5,8 +5,8 @@ void setup() {
   pinMode(LIGHT, OUTPUT);
   pinMode(FAN, OUTPUT);
   Serial.begin(9600);
-  Serial.println("Send 'A' for Light ON, 'a' for Light OFF");
-  Serial.println("Send 'B' for Fan ON, 'b' for Fan OFF");
+  Serial.println("Send '1' for Light ON, '0' for Light OFF");
+  Serial.println("Send '2' for Fan ON, '3' for Fan OFF");
 }
 
 void loop() {
