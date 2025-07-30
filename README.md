@@ -86,4 +86,9 @@ Wiring Steps:
 
 4. Connect LED2 cathode → 220Ω Resistor → GND
 
+#OUTPUT:
+<img width="1919" height="911" alt="Image" src="https://github.com/user-attachments/assets/9ebaaf7a-8f6a-4662-9d97-4e359c0bc5a2" />
+<img width="1919" height="902" alt="Image" src="https://github.com/user-attachments/assets/19a7636c-a178-4d7b-ada7-867ecdcbdb52" />
+
+
 
